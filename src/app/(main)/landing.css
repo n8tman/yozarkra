@@ -1,0 +1,40 @@
+/* Force dark mode styles for the landing page regardless of theme settings */
+
+:root {
+  color-scheme: dark !important;
+}
+
+html,
+body {
+  background-color: #121826 !important;
+  color: #ffffff !important;
+}
+
+/* Ensure dark mode for landing page elements */
+.card {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.navbar {
+  background-color: #121826 !important; /* Darker, solid color */
+  border-color: rgba(76, 29, 149, 0.1) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #e2e8f0 !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+  position: fixed !important;
+  width: 100% !important;
+  top: 0 !important;
+  z-index: 100 !important;
+}
+
+.navbar.scrolled {
+  background-color: #1a2030 !important; /* Slightly lighter when scrolled */
+  border-color: rgba(124, 58, 237, 0.2) !important;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+} 

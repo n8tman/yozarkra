@@ -1,0 +1,324 @@
+/* Compact Mode Styles */
+
+/* Global transition for smooth changes */
+* {
+  transition: padding 0.2s ease-out, margin 0.2s ease-out, font-size 0.2s ease-out, height 0.2s ease-out, line-height 0.2s ease-out;
+}
+
+/* Transition helper class */
+.compact-mode-transition * {
+  transition: all 0.2s ease-out !important;
+}
+
+/* Animation utilities */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-in {
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+}
+
+.slide-in-from-right {
+  animation-name: slideInFromRight;
+}
+
+.duration-300 {
+  animation-duration: 300ms;
+}
+
+/* Apply global compact settings */
+body.compact-mode {
+  line-height: 1.15 !important;
+  font-size: 0.9em !important;
+}
+
+/* Universal element size reduction */
+body.compact-mode * {
+  margin-bottom: 0.15rem !important;
+  padding: 0.15rem !important;
+  max-height: fit-content !important;
+}
+
+/* Restore some elements that need specific padding */
+body.compact-mode select,
+body.compact-mode button,
+body.compact-mode a.button,
+body.compact-mode [role="button"],
+body.compact-mode input[type="button"],
+body.compact-mode input[type="submit"] {
+  padding: 0.1rem 0.5rem !important;
+}
+
+/* Apply smaller padding to containers when compact mode is enabled */
+body.compact-mode .container {
+  padding: 0.35rem !important;
+  max-width: 98% !important;
+  margin: 0 auto !important;
+}
+
+/* Remove extra whitespace */
+body.compact-mode br {
+  display: none !important;
+}
+
+/* Reduce all margins and paddings globally */
+body.compact-mode [class*="p-"] {
+  padding: 0.2rem !important;
+}
+
+body.compact-mode [class*="px-"] {
+  padding-left: 0.2rem !important;
+  padding-right: 0.2rem !important;
+}
+
+body.compact-mode [class*="py-"] {
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+}
+
+body.compact-mode [class*="pt-"],
+body.compact-mode [class*="pb-"],
+body.compact-mode [class*="pl-"],
+body.compact-mode [class*="pr-"] {
+  padding: 0.2rem !important;
+}
+
+body.compact-mode [class*="m-"] {
+  margin: 0.2rem !important;
+}
+
+body.compact-mode [class*="mx-"] {
+  margin-left: 0.2rem !important;
+  margin-right: 0.2rem !important;
+}
+
+body.compact-mode [class*="my-"] {
+  margin-top: 0.2rem !important;
+  margin-bottom: 0.2rem !important;
+}
+
+body.compact-mode [class*="mt-"],
+body.compact-mode [class*="mb-"],
+body.compact-mode [class*="ml-"],
+body.compact-mode [class*="mr-"] {
+  margin: 0.2rem !important;
+}
+
+/* Reduce spacing between elements */
+body.compact-mode .space-y-6 > * {
+  margin-top: 0.35rem !important;
+  margin-bottom: 0 !important;
+}
+
+body.compact-mode .space-y-6 > *:first-child {
+  margin-top: 0 !important;
+}
+
+/* Reduce card padding significantly */
+body.compact-mode .card,
+body.compact-mode [class*="Card"] {
+  padding: 0.35rem !important;
+  margin-bottom: 0.3rem !important;
+  transform: scale(0.97);
+  transform-origin: top center;
+  border-width: 1px !important;
+}
+
+body.compact-mode [class*="CardHeader"] {
+  padding: 0.3rem 0.3rem 0 !important;
+  margin-bottom: 0.1rem !important;
+}
+
+body.compact-mode [class*="CardContent"] {
+  padding: 0.2rem 0.3rem !important;
+}
+
+body.compact-mode [class*="CardFooter"] {
+  padding: 0 0.3rem 0.2rem !important;
+}
+
+/* Dramatically reduce spacing in grids */
+body.compact-mode .grid {
+  gap: 0.2rem !important;
+}
+
+body.compact-mode .grid > * {
+  padding: 0.2rem !important;
+}
+
+/* Reduce font sizes for more compact appearance */
+body.compact-mode h1 {
+  font-size: 1.3rem !important;
+  margin-bottom: 0.25rem !important;
+  line-height: 1.15 !important;
+  padding: 0.1rem 0.2rem !important;
+}
+
+body.compact-mode h2 {
+  font-size: 1.1rem !important;
+  margin-bottom: 0.15rem !important;
+  line-height: 1.15 !important;
+  padding: 0.1rem 0.2rem !important;
+}
+
+body.compact-mode h3 {
+  font-size: 1rem !important;
+  margin-bottom: 0.1rem !important;
+  line-height: 1.15 !important;
+  padding: 0.1rem 0.2rem !important;
+}
+
+body.compact-mode p {
+  margin-bottom: 0.1rem !important;
+  font-size: 0.8rem !important;
+  line-height: 1.2 !important;
+  padding: 0.1rem 0.2rem !important;
+}
+
+/* Make form controls more compact */
+body.compact-mode label {
+  margin-bottom: 0.05rem !important;
+  font-size: 0.8rem !important;
+  display: block !important;
+}
+
+body.compact-mode .space-y-4 > * {
+  margin-top: 0.2rem !important;
+  margin-bottom: 0 !important;
+}
+
+body.compact-mode .space-y-4 > *:first-child {
+  margin-top: 0 !important;
+}
+
+body.compact-mode .space-y-2 > * {
+  margin-top: 0.1rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Reduce button and input sizes */
+body.compact-mode button,
+body.compact-mode input,
+body.compact-mode select,
+body.compact-mode textarea {
+  min-height: 1.5rem !important;
+  padding: 0.15rem 0.25rem !important;
+  font-size: 0.8rem !important;
+}
+
+/* Dashboard specific compact styles */
+body.compact-mode .mb-6 {
+  margin-bottom: 0.2rem !important;
+}
+
+body.compact-mode .mb-8 {
+  margin-bottom: 0.25rem !important;
+}
+
+body.compact-mode .mb-10 {
+  margin-bottom: 0.3rem !important;
+}
+
+/* Course cards in compact mode */
+body.compact-mode [class*="CourseCard"] {
+  padding: 0.25rem !important;
+  transform: scale(0.95);
+  margin-bottom: 0.25rem !important;
+}
+
+/* Make dashboard layout more compact */
+body.compact-mode .dashboard-main {
+  padding: 0.25rem !important;
+}
+
+/* Reduce padding in menu items */
+body.compact-mode [class*="MenuItem"],
+body.compact-mode [class*="NavItem"] {
+  padding: 0.15rem 0.3rem !important;
+  font-size: 0.8rem !important;
+}
+
+/* Make lists more compact */
+body.compact-mode ul,
+body.compact-mode ol {
+  padding-left: 1rem !important;
+  margin: 0.1rem 0 !important;
+}
+
+body.compact-mode li {
+  margin-bottom: 0.1rem !important;
+  font-size: 0.8rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Handle flex layouts */
+body.compact-mode [class*="flex"] {
+  gap: 0.2rem !important;
+}
+
+body.compact-mode [class*="gap-"] {
+  gap: 0.2rem !important;
+}
+
+/* Specific adjustments for dashboard elements */
+body.compact-mode [class*="sidebar"] {
+  padding: 0.2rem !important;
+  width: min-content !important;
+}
+
+body.compact-mode [class*="header"] {
+  padding: 0.25rem 0.5rem !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+
+/* Keep icons visible but smaller */
+body.compact-mode svg {
+  width: 0.8em !important;
+  height: 0.8em !important;
+}
+
+/* Add a visual indicator that compact mode is active */
+body.compact-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4f46e5, #a855f7, #ec4899);
+  z-index: 9999;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+} 
